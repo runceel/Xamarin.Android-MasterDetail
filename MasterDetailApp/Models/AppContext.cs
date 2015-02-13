@@ -15,6 +15,8 @@ namespace MasterDetailApp.Models
 {
     public class AppContext : ObservableObject
     {
+        public static readonly AppContext Instance = new AppContext();
+
         private Master master;
 
         public Master Master
@@ -27,5 +29,6 @@ namespace MasterDetailApp.Models
         {
             this.Master = new Master();
         }
+
     }
 }
